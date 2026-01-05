@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Pendaftaran | RS ZYSehat</title>
+    <link rel="stylesheet" href="style.css/warna.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="logo">
+            <img src="img/lego.png" alt="Logo RS ZYSehat">
+        </div>
+        <h3>Rumah Sakit ZYSehat</h3>
+    </div>
+
+    <!-- BANNER -->
+    <div class="banner"></div>
+
+    <!-- NAVBAR -->
+    <div class="top-bar">
+        <div class="top-left">
+            <span id="clock" class="top-clock"></span><br>
+            <span id="date" class="top-date"></span>
+        </div>
+
+        <div class="top-right">
+            <a href="index.html">Beranda</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="dokter.html">Dokter Kami</a>
+            <a href="pendaftaran.html">Pendaftaran</a>
+        </div>
+    </div>
+
+    <!-- PENDAFTARAN -->
+    <div class="section pendaftaran">
+        <div class="form-card">
+            <h2>Form Pendaftaran Pasien</h2>
+            <p>Silakan isi data pasien dengan benar sesuai identitas.</p>
+
+            <form onsubmit="daftarPasien(); return false;">
+                <div class="form-group">
+                    <label>Nama Pasien</label>
+                    <input type="text" id="nama" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Umur</label>
+                        <input type="number" id="umur" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Jenis Kelamin</label>
+                        <select id="jk" required>
+                            <option value="">Pilih</option>
+                            <option>Laki-laki</option>
+                            <option>Perempuan</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Waktu Kunjungan</label>
+                    <select id="waktu" required>
+                        <option value="">Pilih Waktu</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label>No. HP</label>
+                    <input type="tel" id="hp" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Poli Tujuan</label>
+                        <select id="poli" required>
+                            <option>Poli Umum</option>
+                            <option>Poli Anak</option>
+                            <option>Poli Gigi</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Tanggal Kunjungan</label>
+                        <input type="date" id="tanggal" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-daftar">Daftar Pasien</button>
+            </form>
+
+            <div id="hasil" class="hasil"></div>
+        </div>
+    </div>
+
+
+    <!-- FOOTER -->
+    <div class="footer">© 2025 RAIHAN ARYA SAPUTRA | 251011700220 | 01SIFP004</div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        function updateClock() {
+        const now = new Date();
+
+        let jam = now.getHours();
+        let menit = now.getMinutes();
+        let detik = now.getSeconds();
+
+        jam = jam < 10 ? "0" + jam : jam;
+        menit = menit < 10 ? "0" + menit : menit;
+        detik = detik < 10 ? "0" + detik : detik;
+        
+        const namaHari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+        const namaBulan = [
+            "Januari", "Februari", "Maret", "April", "Mei", "Juni",
+            "Juli", "Agustus", "September", "Oktober", "November", "Desember"
+        ];
+
+        let hari = namaHari[now.getDay()];
+        let tanggal = now.getDate();
+        let bulan = namaBulan[now.getMonth()];
+        let tahun = now.getFullYear();
+
+        
+        document.getElementById("clock").innerHTML =
+            jam + ":" + menit + ":" + detik;
+
+        document.getElementById("date").innerHTML =
+            hari + ", " + tanggal + " " + bulan + " " + tahun;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+
+
+</body>
+</html>

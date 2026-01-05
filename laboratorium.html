@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Beranda | RS ZYSehat</title>
+<link rel="stylesheet" href="style.css/warna.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="logo">
+            <img src="img/lego.png">
+        </div>
+        <h3>Rumah Sakit ZYSehat</h3>
+    </div>
+
+    <!-- BANNER -->
+    <div class="banner"></div>
+
+    <!-- NAVBAR -->
+    <div class="top-bar">
+        <div class="top-left">
+            <span id="clock" class="top-clock"></span><br>
+            <span id="date" class="top-date"></span>
+        </div>
+
+        <div class="top-right">
+            <a href="index.html">Beranda</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="dokter.html">Dokter Kami</a>
+            <a href="pendaftaran.html">Pendaftaran</a>
+        </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="section laboratorium">
+        <h2>Layanan Laboratorium & Radiologi</h2>
+
+        <div class="laboratorium">
+            <div class="laboratorium-img">
+                <img src="img/gambar laboratorium.jpg" alt="Laboratorium RS ZYSehat">
+                <img src="img/gambar laboratorium 2.jpg" alt="Radiologi RS ZYSehat">
+            </div>
+
+            <div class="laboratorium">
+                <p>
+                    Layanan Laboratorium dan Radiologi Rumah Sakit ZYSehat merupakan
+                    unit penunjang medis yang berperan penting dalam membantu dokter
+                    menegakkan diagnosis secara akurat dan cepat. Layanan ini
+                    dirancang untuk memberikan hasil pemeriksaan yang tepat,
+                    terpercaya, dan sesuai dengan standar pelayanan kesehatan.
+                </p>
+
+                <p>
+                    Laboratorium RS ZYSehat melayani berbagai jenis pemeriksaan,
+                    mulai dari pemeriksaan darah, urin, feses, hingga pemeriksaan
+                    penunjang lainnya yang dibutuhkan untuk mengetahui kondisi
+                    kesehatan pasien secara menyeluruh.
+                </p>
+
+                <p>
+                    Layanan Radiologi RS ZYSehat menyediakan pemeriksaan pencitraan
+                    medis seperti rontgen (X-Ray), USG, dan pemeriksaan radiologi
+                    lainnya yang membantu dalam mendeteksi serta memantau berbagai
+                    kondisi medis secara non-invasif.
+                </p>
+
+                <p>
+                    Laboratorium dan Radiologi RS ZYSehat didukung oleh tenaga medis
+                    profesional dan berpengalaman, serta menggunakan peralatan
+                    medis modern dan terkalibrasi untuk menjamin keakuratan hasil
+                    pemeriksaan.
+                </p>
+
+                <p>
+                    Dalam pelaksanaannya, layanan ini terintegrasi dengan unit
+                    pelayanan lainnya, sehingga hasil pemeriksaan dapat diakses
+                    dengan cepat oleh dokter penanggung jawab pasien guna
+                    menentukan tindakan medis lanjutan yang tepat.
+                </p>
+
+                <p>
+                    Layanan Laboratorium dan Radiologi RS ZYSehat melayani pasien
+                    umum maupun peserta BPJS Kesehatan dengan prosedur yang jelas
+                    dan transparan. RS ZYSehat berkomitmen untuk memberikan
+                    pelayanan penunjang medis yang profesional, aman, dan
+                    berorientasi pada kualitas serta kepuasan pasien.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">© 2025 RAIHAN ARYA SAPUTRA | 251011700220 | 01SIFP004</div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        function updateClock() {
+        const now = new Date();
+
+        let jam = now.getHours();
+        let menit = now.getMinutes();
+        let detik = now.getSeconds();
+
+        jam = jam < 10 ? "0" + jam : jam;
+        menit = menit < 10 ? "0" + menit : menit;
+        detik = detik < 10 ? "0" + detik : detik;
+        
+        const namaHari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+        const namaBulan = [
+            "Januari", "Februari", "Maret", "April", "Mei", "Juni",
+            "Juli", "Agustus", "September", "Oktober", "November", "Desember"
+        ];
+
+        let hari = namaHari[now.getDay()];
+        let tanggal = now.getDate();
+        let bulan = namaBulan[now.getMonth()];
+        let tahun = now.getFullYear();
+
+        
+        document.getElementById("clock").innerHTML =
+            jam + ":" + menit + ":" + detik;
+
+        document.getElementById("date").innerHTML =
+            hari + ", " + tanggal + " " + bulan + " " + tahun;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+
+</body>
+</html>

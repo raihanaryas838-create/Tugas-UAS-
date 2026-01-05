@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Beranda | RS ZYSehat</title>
+<link rel="stylesheet" href="style.css/warna.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="logo">
+            <img src="img/lego.png">
+        </div>
+        <h3>Rumah Sakit ZYSehat</h3>
+    </div>
+
+    <!-- BANNER -->
+    <div class="banner"></div>
+
+    <!-- NAVBAR -->
+    <div class="top-bar">
+        <div class="top-left">
+            <span id="clock" class="top-clock"></span><br>
+            <span id="date" class="top-date"></span>
+        </div>
+
+        <div class="top-right">
+            <a href="index.html">Beranda</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="dokter.html">Dokter Kami</a>
+            <a href="pendaftaran.html">Pendaftaran</a>
+        </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="section rawat-inap">
+        <h2>Layanan Rawat Inap</h2>
+
+        <div class="rawat-inap-container">
+            <div class="rawat-inap-img">
+                <img src="img/gambar ruang inap.jpg" alt="Ruang Rawat Inap RS ZYSehat">
+                <img src="img/gambar ruang inap 2.jpg" alt="Fasilitas Rawat Inap RS ZYSehat">
+            </div>
+
+            <div class="rawat-inap-text">
+                <p>
+                    Layanan Rawat Inap Rumah Sakit ZYSehat merupakan layanan perawatan
+                    medis yang diberikan kepada pasien yang memerlukan pemantauan,
+                    perawatan, dan penanganan intensif selama jangka waktu tertentu
+                    sesuai dengan kondisi kesehatan pasien. Layanan ini dirancang
+                    untuk memberikan kenyamanan, keamanan, serta perawatan medis
+                    yang optimal selama pasien menjalani masa perawatan di rumah sakit.
+                </p>
+
+                <p>
+                    RS ZYSehat menyediakan berbagai jenis ruang rawat inap yang nyaman,
+                    bersih, dan tertata dengan baik, mulai dari kelas perawatan umum,
+                    kelas BPJS, hingga ruang perawatan khusus. Setiap ruang rawat inap
+                    dilengkapi dengan fasilitas penunjang seperti tempat tidur pasien,
+                    kamar mandi, sistem ventilasi yang baik, serta lingkungan yang
+                    mendukung proses pemulihan pasien.
+                </p>
+
+                <p>
+                    Selama menjalani rawat inap, pasien akan mendapatkan perawatan
+                    langsung dari dokter spesialis, dokter umum, serta tenaga
+                    keperawatan profesional yang siap siaga selama 24 jam. Tim medis
+                    RS ZYSehat secara rutin melakukan pemantauan kondisi pasien,
+                    pemberian obat, tindakan medis, serta evaluasi perkembangan
+                    kesehatan pasien secara berkala.
+                </p>
+
+                <p>
+                    Layanan rawat inap RS ZYSehat juga didukung oleh fasilitas medis
+                    penunjang seperti laboratorium, radiologi, instalasi farmasi,
+                    serta layanan gizi yang disesuaikan dengan kebutuhan medis
+                    masing-masing pasien. Seluruh pelayanan diberikan dengan
+                    mengutamakan standar keselamatan pasien dan kualitas layanan.
+                </p>
+
+                <p>
+                    Selain fokus pada aspek medis, RS ZYSehat juga memperhatikan
+                    kenyamanan dan kebutuhan psikologis pasien serta keluarga.
+                    Dengan suasana ruang perawatan yang tenang, bersih, dan nyaman,
+                    diharapkan pasien dapat menjalani proses penyembuhan dengan lebih
+                    baik dan optimal.
+                </p>
+
+                <p>
+                    Layanan rawat inap RS ZYSehat melayani pasien umum maupun peserta
+                    BPJS Kesehatan dengan prosedur administrasi yang jelas dan
+                    transparan. Petugas kami siap membantu memberikan informasi
+                    terkait alur rawat inap, fasilitas kamar, serta hak dan kewajiban
+                    pasien selama menjalani perawatan.
+                </p>
+
+                <p>
+                    Dengan komitmen memberikan pelayanan yang profesional, humanis,
+                    dan berorientasi pada keselamatan pasien, RS ZYSehat senantiasa
+                    berupaya menjadi pilihan utama masyarakat dalam mendapatkan
+                    layanan rawat inap yang berkualitas dan terpercaya.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">© 2025 RAIHAN ARYA SAPUTRA | 251011700220 | 01SIFP004</div>
+
+    <!-- JAVACSRIPT -->
+    <script>
+        function updateClock() {
+        const now = new Date();
+
+        let jam = now.getHours();
+        let menit = now.getMinutes();
+        let detik = now.getSeconds();
+
+        jam = jam < 10 ? "0" + jam : jam;
+        menit = menit < 10 ? "0" + menit : menit;
+        detik = detik < 10 ? "0" + detik : detik;
+        
+        const namaHari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+        const namaBulan = [
+            "Januari", "Februari", "Maret", "April", "Mei", "Juni",
+            "Juli", "Agustus", "September", "Oktober", "November", "Desember"
+        ];
+
+        let hari = namaHari[now.getDay()];
+        let tanggal = now.getDate();
+        let bulan = namaBulan[now.getMonth()];
+        let tahun = now.getFullYear();
+
+        
+        document.getElementById("clock").innerHTML =
+            jam + ":" + menit + ":" + detik;
+
+        document.getElementById("date").innerHTML =
+            hari + ", " + tanggal + " " + bulan + " " + tahun;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+    
+</body>
+</html>

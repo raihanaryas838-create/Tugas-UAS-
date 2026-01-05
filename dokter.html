@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Layanan | RS ZYSehat</title>
+<link rel="stylesheet" href="style.css/warna.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="logo"><img src="img/lego.png"></div>
+        <h3>Rumah Sakit ZYSehat</h3>
+    </div>
+
+    <!-- BANNER -->
+    <div class="banner"></div>
+
+    <!-- NAVBAR -->
+    <div class="top-bar">
+        <div class="top-left">
+            <span id="clock" class="top-clock"></span><br>
+            <span id="date" class="top-date"></span>
+        </div>
+
+        <div class="top-right">
+            <a href="index.html">Beranda</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="dokter.html">Dokter Kami</a>
+            <a href="pendaftaran.html">Pendaftaran</a>
+        </div>
+    </div>
+
+    <!-- DOKTER SPESIALIS -->
+    <div class="section">
+        <h2>Dokter Spesialis</h2>
+
+        <div class="dokter-list">
+
+            <!-- Dokter 1 -->
+            <div class="dokter-row">
+                <div class="dokter-foto">
+                    <img src="img/gambar dokter andi.jpg" alt="Dr. Andi Wijaya">
+                </div>
+
+                <div class="dokter-info">
+                    <h3>Dr. Andi Wijaya</h3>
+                    <p class="spesialis">Spesialis Penyakit Dalam</p>
+                    <p class="deskripsi">
+                        Berpengalaman menangani berbagai penyakit dalam dan konsultasi kesehatan dewasa.
+                    </p>
+
+                    <h4>Jadwal Praktik</h4>
+                    <div class="jadwal-kotak">
+                        <span>Senin<br>08.00 - 12.00</span>
+                        <span>Selasa<br>09.00 - 12.00</span>
+                        <span>Rabu<br>10.00 - 12.00</span>
+                        <span>Kamis<br>-</span>
+                        <span>Jumat<br>14.00 - 16.00</span>
+                        <span>sabtu<br>12.00 - 15.00</span>
+                        <span>Minggu<br>-</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dokter 2 -->
+            <div class="dokter-row">
+                <div class="dokter-foto">
+                    <img src="img/gambar dokter agus.jpg" alt="Dr. Agus Sunandar">
+                </div>
+
+                <div class="dokter-info">
+                    <h3>Dr. Agus Sunandar</h3>
+                    <p class="spesialis">Spesialis Anak</p>
+                    <p class="deskripsi">
+                        Fokus pada kesehatan bayi dan anak dengan pelayanan ramah dan profesional.
+                    </p>
+
+                    <h4>Jadwal Praktik</h4>
+                    <div class="jadwal-kotak">
+                        <span>Senin<br>09.00 - 13.00</span>
+                        <span>Selasa<br>11.00 - 16.00</span>
+                        <span>Rabu<br>07.00 - 12.00</span>
+                        <span>Kamis<br>09.00 - 13.00</span>
+                        <span>Jumat<br>-</span>
+                        <span>Sabtu<br>12.00 - 15.00</span>
+                        <span>Minggu<br>-</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dokter 3 -->
+            <div class="dokter-row">
+                <div class="dokter-foto">
+                    <img src="img/gambar dokter budi.jpg" alt="Dr. Budi Santoso">
+                </div>
+
+                <div class="dokter-info">
+                    <h3>Dr. Budi Santoso</h3>
+                    <p class="spesialis">Spesialis Bedah</p>
+                    <p class="deskripsi">
+                        Menangani tindakan bedah umum dengan standar keselamatan tinggi.
+                    </p>
+
+                    <h4>Jadwal Praktik</h4>
+                    <div class="jadwal-kotak">
+                        <span>Senin<br>10.00 - 14.00</span>
+                        <span>Selasa<br>09.00 - 13.00</span>
+                        <span>Rabu<br>-</span>
+                        <span>Kamis<br>08.00 - 15.00</span>
+                        <span>Jumat<br>10.00 - 14.00</span>
+                        <span>Sabtu<br>-</span>
+                        <span>Minggu<br>11.00 - 17.00</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">© 2025 RAIHAN ARYA SAPUTRA | 251011700220 | 01SIFP004</div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        function updateClock() {
+        const now = new Date();
+
+        let jam = now.getHours();
+        let menit = now.getMinutes();
+        let detik = now.getSeconds();
+
+        jam = jam < 10 ? "0" + jam : jam;
+        menit = menit < 10 ? "0" + menit : menit;
+        detik = detik < 10 ? "0" + detik : detik;
+        
+        const namaHari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+        const namaBulan = [
+            "Januari", "Februari", "Maret", "April", "Mei", "Juni",
+            "Juli", "Agustus", "September", "Oktober", "November", "Desember"
+        ];
+
+        let hari = namaHari[now.getDay()];
+        let tanggal = now.getDate();
+        let bulan = namaBulan[now.getMonth()];
+        let tahun = now.getFullYear();
+
+        
+        document.getElementById("clock").innerHTML =
+            jam + ":" + menit + ":" + detik;
+
+        document.getElementById("date").innerHTML =
+            hari + ", " + tanggal + " " + bulan + " " + tahun;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+
+</body>
+</html>

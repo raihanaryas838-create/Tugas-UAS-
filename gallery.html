@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Gallery | RS ZYSehat</title>
+<link rel="stylesheet" href="style.css/warna.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="logo"><img src="img/lego.png"></div>
+        <h3>Rumah Sakit ZYSehat</h3>
+    </div>
+
+    <!-- BANNER -->
+    <div class="banner"></div>
+
+    <!-- NAVBAR -->
+    <div class="top-bar">
+        <div class="top-left">
+            <span id="clock" class="top-clock"></span><br>
+            <span id="date" class="top-date"></span>
+        </div>
+
+        <div class="top-right">
+            <a href="index.html">Beranda</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="dokter.html">Dokter Kami</a>
+            <a href="pendaftaran.html">Pendaftaran</a>
+        </div>
+    </div>
+
+    <!-- GALLERY -->
+    <div class="section gallery">
+        <h2>Foto Rumah Sakit</h2>
+
+        <div class="gallery-box">
+            <img src="img/gambar fasilitas.jpg">
+            <p>
+                Fasilitas Rumah Sakit ZYSehat dilengkapi dengan peralatan medis modern
+                dan teknologi terkini untuk mendukung pelayanan kesehatan yang aman,
+                nyaman, serta sesuai dengan standar nasional.
+            </p>
+        </div>
+
+        <div class="gallery-box">
+            <img src="img/gambar ruang perawatan.jpg">
+            <p>
+                Ruang perawatan pasien dirancang dengan konsep bersih, tenang,
+                dan nyaman guna mendukung proses pemulihan pasien serta memberikan
+                rasa aman bagi keluarga yang mendampingi.
+            </p>
+        </div>
+
+        <div class="gallery-box">
+            <img src="img/gambar lingkungan rumah sakit.jpg">
+            <p>
+                Lingkungan Rumah Sakit ZYSehat tertata rapi dan asri, menciptakan
+                suasana yang sejuk dan kondusif sehingga pasien maupun pengunjung
+                merasa lebih tenang selama berada di area rumah sakit.
+            </p>
+        </div>
+
+        <div class="gallery-box">
+            <img src="img/gambar ruang IGD 2.jpg">
+            <p>
+                Instalasi Gawat Darurat (IGD) Rumah Sakit ZYSehat beroperasi selama 24 jam untuk menangani pasien dengan kondisi darurat secara cepat dan tepat. Didukung oleh tenaga medis profesional serta fasilitas medis yang memadai, IGD siap memberikan pelayanan pertolongan pertama dan penanganan lanjutan demi keselamatan dan kenyamanan pasien.
+            </p>
+        </div>
+
+        <div class="gallery-box">
+            <img src="img/gambar laboratorium 2.jpg">
+            <p>
+                Ruang Laboratorium Rumah Sakit ZYSehat menyediakan layanan pemeriksaan medis yang akurat dan terpercaya untuk mendukung proses diagnosis dan perawatan pasien. Didukung oleh tenaga analis laboratorium yang profesional serta peralatan modern, laboratorium kami mampu melakukan berbagai pemeriksaan dengan hasil yang cepat, tepat, dan sesuai standar pelayanan kesehatan.
+            </p>
+        </div>
+
+        <div class="gallery-box">
+            <img src="img/gambar ruang farmasi 2.jpg">
+            <p>
+                Ruang Farmasi Rumah Sakit ZYSehat menyediakan layanan pengelolaan dan penyediaan obat yang aman, lengkap, dan sesuai dengan resep dokter. Didukung oleh tenaga farmasi profesional serta sistem pengelolaan obat yang terstandar, ruang farmasi kami berkomitmen memberikan pelayanan yang cepat, tepat, dan informatif guna mendukung kesembuhan serta keselamatan pasien.
+            </p>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">© 2025 RAIHAN ARYA SAPUTRA | 251011700220 | 01SIFP004</div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        function updateClock() {
+        const now = new Date();
+
+        let jam = now.getHours();
+        let menit = now.getMinutes();
+        let detik = now.getSeconds();
+
+        jam = jam < 10 ? "0" + jam : jam;
+        menit = menit < 10 ? "0" + menit : menit;
+        detik = detik < 10 ? "0" + detik : detik;
+        
+        const namaHari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+        const namaBulan = [
+            "Januari", "Februari", "Maret", "April", "Mei", "Juni",
+            "Juli", "Agustus", "September", "Oktober", "November", "Desember"
+        ];
+
+        let hari = namaHari[now.getDay()];
+        let tanggal = now.getDate();
+        let bulan = namaBulan[now.getMonth()];
+        let tahun = now.getFullYear();
+
+        
+        document.getElementById("clock").innerHTML =
+            jam + ":" + menit + ":" + detik;
+
+        document.getElementById("date").innerHTML =
+            hari + ", " + tanggal + " " + bulan + " " + tahun;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+
+</body>
+</html>

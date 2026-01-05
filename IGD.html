@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Beranda | RS ZYSehat</title>
+<link rel="stylesheet" href="style.css/warna.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="logo">
+            <img src="img/lego.png">
+        </div>
+        <h3>Rumah Sakit ZYSehat</h3>
+    </div>
+
+    <!-- BANNER -->
+    <div class="banner"></div>
+
+    <!-- NAVBAR -->
+    <div class="top-bar">
+        <div class="top-left">
+            <span id="clock" class="top-clock"></span><br>
+            <span id="date" class="top-date"></span>
+        </div>
+
+        <div class="top-right">
+            <a href="index.html">Beranda</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="dokter.html">Dokter Kami</a>
+            <a href="pendaftaran.html">Pendaftaran</a>
+        </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="section IGD">
+        <h2>Instalasi Gawat Darurat (IGD) 24 Jam</h2>
+
+        <div class="IGD">
+            <div class="IGD-img">
+                <img src="img/gambar ruang IGD.jpg" alt="IGD RS ZYSehat">
+                <img src="img/gambar ruang IGD 2.jpg" alt="Pelayanan IGD 24 Jam RS ZYSehat">
+            </div>
+
+            <div class="IGD-text">
+                <p>
+                    Instalasi Gawat Darurat (IGD) 24 Jam Rumah Sakit ZYSehat merupakan
+                    unit pelayanan medis yang siap memberikan penanganan cepat dan
+                    tepat bagi pasien dengan kondisi gawat darurat yang mengancam
+                    keselamatan jiwa. IGD RS ZYSehat beroperasi selama 24 jam penuh,
+                    setiap hari, termasuk hari libur, guna memastikan masyarakat
+                    mendapatkan pertolongan medis kapan pun dibutuhkan.
+                </p>
+
+                <p>
+                    IGD RS ZYSehat didukung oleh tim medis profesional yang terdiri
+                    dari dokter jaga, perawat terlatih, serta tenaga medis pendukung
+                    yang berpengalaman dalam menangani berbagai kondisi darurat,
+                    seperti kecelakaan, serangan jantung, stroke, gangguan pernapasan,
+                    trauma, serta kondisi kritis lainnya.
+                </p>
+
+                <p>
+                    Dalam memberikan pelayanan, IGD RS ZYSehat menerapkan sistem
+                    triase untuk menentukan prioritas penanganan pasien berdasarkan
+                    tingkat kegawatdaruratan. Hal ini bertujuan agar pasien dengan
+                    kondisi paling kritis dapat segera memperoleh penanganan medis
+                    secara cepat, tepat, dan sesuai dengan standar pelayanan
+                    kegawatdaruratan.
+                </p>
+
+                <p>
+                    IGD RS ZYSehat dilengkapi dengan fasilitas dan peralatan medis
+                    yang memadai, seperti ruang resusitasi, ruang observasi,
+                    peralatan penunjang medis, serta akses cepat ke layanan
+                    laboratorium, radiologi, dan ruang rawat inap apabila pasien
+                    memerlukan perawatan lanjutan.
+                </p>
+
+                <p>
+                    Selain penanganan medis, IGD RS ZYSehat juga mengutamakan aspek
+                    keselamatan, kenyamanan, dan komunikasi yang baik dengan pasien
+                    serta keluarga. Petugas kami siap memberikan informasi yang jelas
+                    mengenai kondisi pasien, tindakan medis yang dilakukan, serta
+                    prosedur lanjutan yang diperlukan.
+                </p>
+
+                <p>
+                    Layanan IGD 24 Jam RS ZYSehat melayani pasien umum maupun pasien
+                    peserta BPJS Kesehatan dengan prosedur administrasi yang jelas
+                    dan transparan. Dengan komitmen tinggi terhadap keselamatan dan
+                    kualitas pelayanan, RS ZYSehat senantiasa siap menjadi garda
+                    terdepan dalam memberikan pelayanan kegawatdaruratan yang cepat,
+                    tanggap, dan profesional.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">© 2025 RAIHAN ARYA SAPUTRA | 251011700220 | 01SIFP004</div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        function updateClock() {
+        const now = new Date();
+
+        let jam = now.getHours();
+        let menit = now.getMinutes();
+        let detik = now.getSeconds();
+
+        jam = jam < 10 ? "0" + jam : jam;
+        menit = menit < 10 ? "0" + menit : menit;
+        detik = detik < 10 ? "0" + detik : detik;
+        
+        const namaHari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+        const namaBulan = [
+            "Januari", "Februari", "Maret", "April", "Mei", "Juni",
+            "Juli", "Agustus", "September", "Oktober", "November", "Desember"
+        ];
+
+        let hari = namaHari[now.getDay()];
+        let tanggal = now.getDate();
+        let bulan = namaBulan[now.getMonth()];
+        let tahun = now.getFullYear();
+
+        
+        document.getElementById("clock").innerHTML =
+            jam + ":" + menit + ":" + detik;
+
+        document.getElementById("date").innerHTML =
+            hari + ", " + tanggal + " " + bulan + " " + tahun;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+
+</body>
+</html>

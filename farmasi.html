@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Beranda | RS ZYSehat</title>
+<link rel="stylesheet" href="style.css/warna.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="logo">
+            <img src="img/lego.png">
+        </div>
+        <h3>Rumah Sakit ZYSehat</h3>
+    </div>
+
+    <!-- BANNER -->
+    <div class="banner"></div>
+
+    <!-- NAVBAR -->
+    <div class="top-bar">
+        <div class="top-left">
+            <span id="clock" class="top-clock"></span><br>
+            <span id="date" class="top-date"></span>
+        </div>
+
+        <div class="top-right">
+            <a href="index.html">Beranda</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="dokter.html">Dokter Kami</a>
+            <a href="pendaftaran.html">Pendaftaran</a>
+        </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="section farmasi">
+        <h2>Layanan Farmasi</h2>
+
+        <div class="farmasi">
+            <div class="farmasi-img">
+                <img src="img/gambar ruang farmasi.jpg" alt="Instalasi Farmasi RS ZYSehat">
+                <img src="img/gambar ruang farmasi 2.jpg" alt="Pelayanan Farmasi RS ZYSehat">
+            </div>
+
+            <div class="farmasi-text">
+                <p>
+                    Layanan Farmasi Rumah Sakit ZYSehat merupakan unit pelayanan
+                    penunjang medis yang bertanggung jawab dalam pengelolaan,
+                    penyediaan, dan pendistribusian obat-obatan serta perbekalan
+                    kesehatan yang aman, bermutu, dan sesuai dengan standar
+                    pelayanan kefarmasian.
+                </p>
+
+                <p>
+                    Instalasi Farmasi RS ZYSehat melayani resep dari dokter untuk
+                    pasien rawat jalan, rawat inap, maupun pasien gawat darurat,
+                    dengan memastikan ketepatan jenis obat, dosis, aturan pakai,
+                    serta keamanan penggunaan obat bagi pasien.
+                </p>
+
+                <p>
+                    Layanan Farmasi RS ZYSehat didukung oleh apoteker dan tenaga
+                    teknis kefarmasian yang profesional dan berpengalaman, serta
+                    siap memberikan informasi dan edukasi kepada pasien mengenai
+                    cara penggunaan obat, efek samping, serta hal-hal penting
+                    lainnya yang perlu diperhatikan selama menjalani pengobatan.
+                </p>
+
+                <p>
+                    Dalam menunjang pelayanan kesehatan, Instalasi Farmasi RS
+                    ZYSehat juga menerapkan sistem pengelolaan obat yang tertib dan
+                    terkontrol guna menjamin ketersediaan obat secara berkelanjutan
+                    serta mencegah terjadinya kesalahan pemberian obat.
+                </p>
+
+                <p>
+                    Layanan Farmasi RS ZYSehat melayani pasien umum maupun peserta
+                    BPJS Kesehatan dengan prosedur administrasi yang jelas dan
+                    transparan. Seluruh pelayanan dilakukan dengan mengutamakan
+                    keselamatan pasien, ketepatan pelayanan, serta kenyamanan
+                    dalam proses pengambilan obat.
+                </p>
+
+                <p>
+                    Dengan komitmen terhadap mutu dan keselamatan pasien, Layanan
+                    Farmasi RS ZYSehat senantiasa berupaya memberikan pelayanan
+                    kefarmasian yang profesional, ramah, dan berorientasi pada
+                    kebutuhan pasien.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">© 2025 RAIHAN ARYA SAPUTRA | 251011700220 | 01SIFP004</div>
+
+    <!-- JAVASCRIPT -->
+   <script>
+        function updateClock() {
+        const now = new Date();
+
+        let jam = now.getHours();
+        let menit = now.getMinutes();
+        let detik = now.getSeconds();
+
+        jam = jam < 10 ? "0" + jam : jam;
+        menit = menit < 10 ? "0" + menit : menit;
+        detik = detik < 10 ? "0" + detik : detik;
+        
+        const namaHari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+        const namaBulan = [
+            "Januari", "Februari", "Maret", "April", "Mei", "Juni",
+            "Juli", "Agustus", "September", "Oktober", "November", "Desember"
+        ];
+
+        let hari = namaHari[now.getDay()];
+        let tanggal = now.getDate();
+        let bulan = namaBulan[now.getMonth()];
+        let tahun = now.getFullYear();
+
+        
+        document.getElementById("clock").innerHTML =
+            jam + ":" + menit + ":" + detik;
+
+        document.getElementById("date").innerHTML =
+            hari + ", " + tanggal + " " + bulan + " " + tahun;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+
+</body>
+</html>

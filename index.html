@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Beranda | RS ZYSehat</title>
+<link rel="stylesheet" href="style.css/warna.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="logo">
+            <img src="img/lego.png">
+        </div>
+        <h3>Rumah Sakit ZYSehat</h3>
+    </div>
+
+    <!-- BANNER -->
+    <div class="banner"></div>
+
+    <!-- NAVBAR -->
+    <div class="top-bar">
+        <div class="top-left">
+            <span id="clock" class="top-clock"></span><br>
+            <span id="date" class="top-date"></span>
+        </div>
+
+        <div class="top-right">
+            <a href="index.html">Beranda</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="dokter.html">Dokter Kami</a>
+            <a href="pendaftaran.html">Pendaftaran</a>
+        </div>
+    </div>
+
+    <!-- TENTANG -->
+    <div class="section">
+        <h2>Tentang Rumah Sakit ZYSehat</h2>
+        <p>
+            Rumah Sakit ZYSehat merupakan institusi pelayanan kesehatan yang berdiri
+            sejak tahun 2025 dengan tujuan memberikan layanan medis yang berkualitas,
+            aman, dan terjangkau bagi seluruh lapisan masyarakat. Sejak awal
+            berdirinya, RS ZYSehat berkomitmen untuk menjadi rumah sakit yang
+            mengutamakan keselamatan pasien, profesionalisme tenaga medis, serta
+            kenyamanan dalam setiap proses pelayanan.
+        </p>
+        <p>
+            Didukung oleh dokter spesialis, dokter umum, perawat, dan tenaga medis
+            lainnya yang berpengalaman dan kompeten di bidangnya, RS ZYSehat mampu
+            memberikan penanganan medis yang optimal sesuai dengan standar pelayanan
+            kesehatan. Setiap tenaga kesehatan di RS ZYSehat secara rutin mengikuti
+            pelatihan dan pengembangan kompetensi guna memastikan pelayanan yang
+            diberikan selalu mengikuti perkembangan ilmu kedokteran dan teknologi
+            medis terkini.
+        </p>
+        <p>
+            RS ZYSehat juga dilengkapi dengan fasilitas medis modern seperti ruang
+            rawat inap yang nyaman, instalasi gawat darurat (IGD) 24 jam, layanan
+            laboratorium, radiologi, farmasi, serta berbagai layanan penunjang medis
+            lainnya. Seluruh fasilitas tersebut dirancang untuk memberikan kemudahan,
+            kecepatan, dan ketepatan dalam pelayanan kepada pasien.
+        </p>
+        <p>
+            Seiring dengan perkembangan zaman, Rumah Sakit ZYSehat terus melakukan
+            inovasi dan peningkatan mutu pelayanan, baik dari segi fasilitas,
+            teknologi informasi, maupun sistem manajemen rumah sakit. Kami percaya
+            bahwa pelayanan kesehatan yang baik tidak hanya berfokus pada pengobatan,
+            tetapi juga pada pendekatan humanis, empati, serta komunikasi yang baik
+            antara tenaga medis dan pasien.
+        </p>
+        <p>
+            Dengan visi menjadi rumah sakit pilihan utama masyarakat, RS ZYSehat
+            senantiasa berupaya memberikan pelayanan kesehatan yang holistik,
+            profesional, dan berorientasi pada kepuasan serta keselamatan pasien.
+            Kami siap melayani kebutuhan kesehatan Anda dan keluarga dengan sepenuh
+            hati.
+        </p>
+    </div>
+
+
+    <!-- LAYANAN UTAMA -->
+    <div class="section">
+        <h2>Layanan Utama</h2>
+
+        <div class="layanan-container">
+            <a href="rawat jalan.html" class="layanan-card">
+                <h3>Rawat Jalan</h3>
+                <p>Layanan pemeriksaan dan konsultasi tanpa menginap.</p>
+            </a>
+
+            <a href="rawat inap.html" class="layanan-card">
+                <h3>Rawat Inap</h3>
+                <p>Perawatan pasien dengan fasilitas kamar nyaman.</p>
+            </a>
+
+            <a href="igd.html" class="layanan-card">
+                <h3>IGD 24 Jam</h3>
+                <p>Pelayanan gawat darurat siap 24 jam.</p>
+            </a>
+
+            <a href="laboratorium.html" class="layanan-card">
+                <h3>Laboratorium & Radiologi</h3>
+                <p>Pemeriksaan penunjang medis yang lengkap.</p>
+            </a>
+
+            <a href="farmasi.html" class="layanan-card">
+                <h3>Farmasi</h3>
+                <p>Penyediaan obat resmi dan berkualitas.</p>
+            </a>
+        </div>
+    </div>
+
+    <!-- KEUNGGULAN -->
+    <div class="section">
+        <h2>Keunggulan RS ZYSehat</h2>
+        <p>✅ Dokter dan tenaga medis berpengalaman</p>
+        <p>✅ Fasilitas medis lengkap dan modern</p>
+        <p>✅ Pelayanan 24 jam</p>
+        <p>✅ Melayani pasien BPJS dan umum</p>
+    </div>
+
+    <!-- KONTAK -->
+    <div class="section">
+        <h2>Informasi Kontak</h2>
+        <p>📍 Alamat: Jl. Sentosa Timur No. 15, RT.7/RW.9, Petarukan, Kecamatan Comal, Kota Pemalang, Jawa Tengah</p>
+        <p>📞 Telepon: (021) 8987654</p>
+        <p>✉️ Email: marketings@rszysehat.co.id</p>
+        <p>⏰ Jam Operasional: 24 Jam</p>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">© 2025 RAIHAN ARYA SAPUTRA | 251011700220 | 01SIFP004</div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        function updateClock() {
+        const now = new Date();
+
+        let jam = now.getHours();
+        let menit = now.getMinutes();
+        let detik = now.getSeconds();
+
+        jam = jam < 10 ? "0" + jam : jam;
+        menit = menit < 10 ? "0" + menit : menit;
+        detik = detik < 10 ? "0" + detik : detik;
+
+        const namaHari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+        const namaBulan = [
+            "Januari", "Februari", "Maret", "April", "Mei", "Juni",
+            "Juli", "Agustus", "September", "Oktober", "November", "Desember"
+        ];
+
+        let hari = namaHari[now.getDay()];
+        let tanggal = now.getDate();
+        let bulan = namaBulan[now.getMonth()];
+        let tahun = now.getFullYear();
+
+        document.getElementById("clock").innerHTML =
+            jam + ":" + menit + ":" + detik;
+
+        document.getElementById("date").innerHTML =
+            hari + ", " + tanggal + " " + bulan + " " + tahun;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+
+
+</body>
+</html>
