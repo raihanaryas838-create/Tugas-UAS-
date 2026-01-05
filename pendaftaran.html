@@ -103,6 +103,41 @@
 
     <!-- JAVASCRIPT -->
     <script>
+    let antrian = 1;
+
+    const jadwalPoli = {
+        "Poli Umum": ["08.00 - 10.00", "10.00 - 12.00", "16.00 - 18.00"],
+        "Poli Anak": ["09.00 - 11.00", "13.00 - 15.00"],
+        "Poli Gigi": ["08.00 - 11.00", "14.00 - 17.00"]
+    };
+
+    document.getElementById("poli").addEventListener("change", function () {
+        let waktu = document.getElementById("waktu");
+        waktu.innerHTML = `<option value="">Pilih Waktu</option>`;
+
+        if (jadwalPoli[this.value]) {
+            jadwalPoli[this.value].forEach(jam => {
+                let option = document.createElement("option");
+                option.textContent = jam;
+                waktu.appendChild(option);
+            });
+        }
+    });
+
+    function daftarPasien() {
+        document.getElementById("hasil").innerHTML = `
+            <b>Pendaftaran Berhasil</b><br><br>
+            Nama: ${nama.value}<br>
+            Umur: ${umur.value} tahun<br>
+            Jenis Kelamin: ${jk.value}<br>
+            No. HP: ${hp.value}<br>
+            Poli: ${poli.value}<br>
+            Tanggal: ${tanggal.value}<br>
+            Waktu: ${waktu.value}<br>
+            Nomor Antrian: ${antrian++}<br>
+            Waktu Daftar: ${new Date().toLocaleString()}
+        `;
+    }
         function updateClock() {
         const now = new Date();
 
@@ -140,4 +175,5 @@
 
 </body>
 </html>
+
 
